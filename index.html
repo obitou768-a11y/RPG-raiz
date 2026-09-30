@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECO — O Caminho do Eu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div id="menu" class="screen active">
+      <div class="menu-glow"></div>
+      <p class="eyebrow">UM RPG FILOSÓFICO</p>
+      <h1>ECO</h1>
+      <p class="subtitle">O Caminho do Eu</p>
+      <p class="quote">“Conhecer a si mesmo talvez seja a aventura mais perigosa.”</p>
+      <div class="menu-buttons">
+        <button id="newGameBtn" class="primary">NOVO JOGO</button>
+        <button id="continueBtn">CONTINUAR</button>
+        <button id="creditsBtn">CRÉDITOS</button>
+      </div>
+      <p class="version">v1.0 • escolhas moldam quem você se torna</p>
+    </div>
+
+    <div id="game" class="screen">
+      <header class="topbar">
+        <div class="brand">ECO</div>
+        <div class="chapter" id="chapterLabel">CAPÍTULO I</div>
+        <button id="menuBtn" class="small-btn">☰</button>
+      </header>
+
+      <main class="game-layout">
+        <aside class="panel character-panel">
+          <div class="avatar" id="avatar">E</div>
+          <h2 id="playerName">Viajante</h2>
+          <p id="philosophyLabel">Sem convicção definida</p>
+
+          <div class="bars">
+            <div><span>VIDA</span><strong id="hpText">100 / 100</strong></div>
+            <div class="bar"><i id="hpBar"></i></div>
+            <div><span>VONTADE</span><strong id="willText">0</strong></div>
+            <div class="bar"><i id="willBar"></i></div>
+          </div>
+
+          <div class="stats" id="stats"></div>
+
+          <button id="inventoryBtn" class="side-btn">🎒 INVENTÁRIO</button>
+          <button id="journalBtn" class="side-btn">📖 DIÁRIO</button>
+          <button id="saveBtn" class="side-btn">💾 SALVAR</button>
+        </aside>
+
+        <section class="story-panel">
+          <div id="sceneImage" class="scene-image">
+            <span id="sceneSymbol">◈</span>
+          </div>
+          <div class="story-content">
+            <div class="location" id="locationLabel">A CIDADE SEM NOME</div>
+            <h2 id="sceneTitle">...</h2>
+            <div id="storyText" class="story-text"></div>
+            <div id="choices" class="choices"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="overlay" class="overlay hidden">
+      <div class="modal">
+        <button id="closeModal" class="close">×</button>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="data/story.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
